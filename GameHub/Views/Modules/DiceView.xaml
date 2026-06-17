@@ -2,65 +2,65 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.DiceView">
-    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+    <ScrollView HeightRequest="700" WidthRequest="800">
+        <Border StrokeShape="RoundRectangle 10" Stroke="#f6f7e9">
+            <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center"  BackgroundColor="#f6f7e9" >
 
-        <Label Text="Бросить кубик" 
-               FontSize="30" 
-               FontAttributes="Bold" 
-               HorizontalOptions="Center"
-               TextColor="DarkBlue" />
+                <Label Text="Вам выпало число:" 
+        FontSize="30" 
+        FontAttributes="Bold" 
+        HorizontalOptions="Center"
+        TextColor="Black" />
 
-        
-        <Border BorderColor="LightGray" 
-               CornerRadius="20" 
-               Padding="30"
-               BackgroundColor="White"
-               HorizontalOptions="Center">
-            <Label x:Name="ResultLabel" 
-                   Text="?" 
-                   FontSize="72" 
-                   FontAttributes="Bold"
-                   TextColor="DarkRed"
-                   HorizontalOptions="Center" />
-        </Border>
 
-        
-        <Button x:Name="RollButton" 
-                Text="🎲 Бросить кубик" 
-                FontSize="24"
-                BackgroundColor="DarkGreen" 
-                TextColor="White"
-                CornerRadius="15"
-                HeightRequest="70"
-                Clicked="OnRollDiceClicked" />
+                <Border Stroke="#f6f7e9"
+            HorizontalOptions="Center">
+                    <Label x:Name="ResultLabel" 
+            Text="?" 
+            FontSize="72" 
+            FontAttributes="Bold"
+            TextColor="#5E5F71"
+            HorizontalOptions="Center" />
+                </Border>
 
-        
-        <Border BorderColor="LightGray" 
-               CornerRadius="10" 
-               Padding="10"
-               BackgroundColor="LightYellow"
-               Margin="0,20,0,0">
-            <VerticalStackLayout>
-                <Label Text="История бросков:" 
-                       FontSize="16" 
-                       FontAttributes="Bold" />
 
-                <ScrollView HeightRequest="120">
-                    <Label x:Name="HistoryLabel" 
-                           Text="Нет истории" 
-                           FontSize="14" />
-                </ScrollView>
+                <Button x:Name="RollButton" 
+         Text="Бросить кубик" 
+         FontSize="24"
+         BackgroundColor="#94E4E1" 
+         TextColor="White"
+         CornerRadius="15"
+         HeightRequest="70"
+         Clicked="OnRollDiceClicked" />
+
+
+                <Border StrokeShape="RoundRectangle 10"
+        BackgroundColor="White"
+        Margin="0,20,0,0">
+                    <VerticalStackLayout>
+                        <Label Text="История бросков:" 
+                        FontSize="16" 
+                        FontAttributes="Bold" 
+                           />
+
+                        <ScrollView HeightRequest="120" >
+                            <Label x:Name="HistoryLabel" 
+                    Text="Нет истории" 
+                    FontSize="14" />
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </Border>
+
+
+                <Button x:Name="ClearHistoryButton" 
+         Text="Очистить историю" 
+         FontSize="16"
+         BackgroundColor="Gray" 
+         TextColor="White"
+         CornerRadius="10"
+         Clicked="OnClearHistoryClicked" />
+
             </VerticalStackLayout>
         </Border>
-
-      
-        <Button x:Name="ClearHistoryButton" 
-                Text="🗑️ Очистить историю" 
-                FontSize="16"
-                BackgroundColor="Gray" 
-                TextColor="White"
-                CornerRadius="10"
-                Clicked="OnClearHistoryClicked" />
-
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentView>

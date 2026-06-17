@@ -2,13 +2,32 @@
 <Shell
     x:Class="GameHub.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:GameHub.Views"
     xmlns:local="clr-namespace:GameHub"
-    Title="GameHub">
+    Title="GameHub"
+   
+    >
 
-    <FlyoutItem Title="Chess">
-        <ShellContent
-            ContentTemplate="{DataTemplate }"/>
-    </FlyoutItem>
-  
+    <ShellContent
+        Title="Домашняя страница"
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Route="MainPage"/>
+    <ShellContent
+         Title="ДнД"
+         ContentTemplate="{DataTemplate views:DnDHubPage}"
+         Route="DnDHubPage"/>
+    <ShellContent
+        Title="Шахматы"
+        ContentTemplate="{DataTemplate views:ChessHubPage}"
+        Route="ChessHubPage"/>
+    <ShellContent
+        Title="Настольные игры"
+        ContentTemplate="{DataTemplate views:BoardGamesHubPage}"
+        Route="BoardGamesHubPage"/>
+    <ShellContent
+        Title="Инструменты"
+        ContentTemplate="{DataTemplate views:ToolsHubPage}"
+        Route="ToolsHubPage"/>
+   
 </Shell>

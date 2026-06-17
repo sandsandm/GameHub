@@ -5,7 +5,7 @@ public partial class DiceView : ContentView
     private Random random = new Random();
     private List<string> history = new List<string>();
 
-    public MainPage()
+    public void MainPage()
     {
         InitializeComponent();
     }
@@ -18,10 +18,7 @@ public partial class DiceView : ContentView
         
         ResultLabel.Text = result.ToString();
 
-       
-
-       
-        string historyEntry = $"{DateTime.Now:HH:mm:ss} - Выпало: {result}";
+        string historyEntry = $"{DateTime.Now:HH:mm} - Выпало: {result}";
         history.Add(historyEntry);
 
       
