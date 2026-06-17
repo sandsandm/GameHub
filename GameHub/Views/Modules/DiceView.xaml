@@ -14,51 +14,50 @@
 
 
                 <Border Stroke="#f6f7e9"
-            HorizontalOptions="Center">
+                        HorizontalOptions="Center">
                     <Label x:Name="ResultLabel" 
-            Text="?" 
-            FontSize="72" 
-            FontAttributes="Bold"
-            TextColor="#5E5F71"
-            HorizontalOptions="Center" />
+                            Text="?" 
+                            FontSize="72" 
+                            FontAttributes="Bold"
+                            TextColor="#5E5F71"
+                            HorizontalOptions="Center" />
                 </Border>
 
 
                 <Button x:Name="RollButton" 
-         Text="Бросить кубик" 
-         FontSize="24"
-         BackgroundColor="#94E4E1" 
-         TextColor="White"
-         CornerRadius="15"
-         HeightRequest="70"
-         Clicked="OnRollDiceClicked" />
-
+                         Text="Бросить кубик" 
+                         FontSize="24"
+                         BackgroundColor="#94E4E1" 
+                         TextColor="White"
+                         CornerRadius="15"
+                         HeightRequest="70"
+                         Clicked="OnRollDiceClicked" />
 
                 <Border StrokeShape="RoundRectangle 10"
-        BackgroundColor="White"
-        Margin="0,20,0,0">
+                        BackgroundColor="White"
+                        Margin="0,20,0,0">
                     <VerticalStackLayout>
                         <Label Text="История бросков:" 
-                        FontSize="16" 
-                        FontAttributes="Bold" 
-                           />
+                                FontSize="16" 
+                                FontAttributes="Bold" 
+                        />
 
                         <ScrollView HeightRequest="120" >
                             <Label x:Name="HistoryLabel" 
-                    Text="Нет истории" 
-                    FontSize="14" />
+                                Text="Нет истории" 
+                                FontSize="14" />
                         </ScrollView>
                     </VerticalStackLayout>
                 </Border>
 
 
                 <Button x:Name="ClearHistoryButton" 
-         Text="Очистить историю" 
-         FontSize="16"
-         BackgroundColor="Gray" 
-         TextColor="White"
-         CornerRadius="10"
-         Clicked="OnClearHistoryClicked" />
+                     Text="Очистить историю" 
+                     FontSize="16"
+                     BackgroundColor="Gray" 
+                     TextColor="White"
+                     CornerRadius="10"
+                     Clicked="OnClearHistoryClicked" />
 
             </VerticalStackLayout>
         </Border>

@@ -5,29 +5,26 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:views="clr-namespace:GameHub.Views"
     xmlns:local="clr-namespace:GameHub"
-    Title="GameHub"
-   
-    >
+    Title="GameHub">
+    
+    <FlyoutItem Title="Домашняя страница" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage"/>
+    </FlyoutItem>
 
-    <ShellContent
-        Title="Домашняя страница"
-        ContentTemplate="{DataTemplate views:MainPage}"
-        Route="MainPage"/>
-    <ShellContent
-         Title="ДнД"
-         ContentTemplate="{DataTemplate views:DnDHubPage}"
-         Route="DnDHubPage"/>
-    <ShellContent
-        Title="Шахматы"
-        ContentTemplate="{DataTemplate views:ChessHubPage}"
-        Route="ChessHubPage"/>
-    <ShellContent
-        Title="Настольные игры"
-        ContentTemplate="{DataTemplate views:BoardGamesHubPage}"
-        Route="BoardGamesHubPage"/>
-    <ShellContent
-        Title="Инструменты"
-        ContentTemplate="{DataTemplate views:ToolsHubPage}"
-        Route="ToolsHubPage"/>
-   
+    <FlyoutItem Title="ДнД" Icon="dnd.png">
+        <ShellContent ContentTemplate="{DataTemplate views:DnDHubPage}" Route="DnDHubPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Шахматы" Icon="chess.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ChessHubPage}" Route="ChessHubPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Настольные игры" Icon="boardgames.png">
+        <ShellContent ContentTemplate="{DataTemplate views:BoardGamesHubPage}" Route="BoardGamesHubPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Инструменты" Icon="tools.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ToolsHubPage}" Route="ToolsHubPage"/>
+    </FlyoutItem>
+
 </Shell>
