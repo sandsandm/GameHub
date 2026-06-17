@@ -4,8 +4,8 @@
              x:Class="GameHub.Views.Modules.PlayerRandomizerView"
              xmlns:local="clr-namespace:GameHub"
              xmlns:viewmodel="clr-namespace:GameHub.ViewModels">
-    
-    <Grid Padding="20" RowSpacing="10">
+
+    <Grid Padding="20" RowSpacing="10" BackgroundColor="#f6f7e9">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -36,7 +36,7 @@
 
             <Button Text="Добавить" 
                     Command="{Binding AddPlayerCommand}"
-                    BackgroundColor="#4CAF50"
+                    BackgroundColor="#94E4E1"
                     TextColor="White"/>
         </HorizontalStackLayout>
 
@@ -79,32 +79,33 @@
                TextColor="Gray"/>
 
         <Button Grid.Row="5" 
-                Text="Выбрать победителя" 
+                Text="Выбрать случайного игрока" 
                 Command="{Binding SelectWinnerCommand}"
-                BackgroundColor="#2196F3"
+                BackgroundColor="#5E5F71"
                 TextColor="White"
                 FontSize="18"
                 IsEnabled="{Binding CanSelectWinner}"/>
 
         <Border Grid.Row="6" 
-                Stroke="#FFD700" 
+                Stroke="#94E4E1" 
                 StrokeThickness="3"
                 Padding="20"
                 Margin="0,20,0,0"
                 HorizontalOptions="Center"
-                VerticalOptions="Center">
+                VerticalOptions="Center"
+                StrokeShape="RoundRectangle 10">
             <StackLayout>
-                <Label Text="🏆 Победитель 🏆"
+                <Label Text="Избраннный игрок"
                        FontSize="20"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
-                       TextColor="#FFD700"/>
+                       TextColor="#5E5F71"/>
 
                 <Label Text="{Binding WinnerName}"
                        FontSize="32"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
-                       TextColor="#4CAF50"/>
+                       TextColor="DimGray"/>
             </StackLayout>
         </Border>
     </Grid>

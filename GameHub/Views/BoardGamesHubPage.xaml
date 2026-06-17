@@ -6,10 +6,7 @@
              xmlns:modules="clr-namespace:GameHub.Views.Modules">
     <ScrollView>
         <VerticalStackLayout>
-         <Label 
-            Text="BoardGames"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+         
         <modules:PlayerRandomizerView/>
         <modules:DiceView></modules:DiceView>
 
