@@ -10,11 +10,5 @@
             Text="DnD"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
-        <modules:DiceView></modules:DiceView>
-        <modules:DiceView WidthRequest="800" 
-                         HeightRequest="500"
-                         Margin="10" />
-
     </VerticalStackLayout>
 </ContentPage>
