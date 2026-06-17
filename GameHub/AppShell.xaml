@@ -11,7 +11,7 @@
         <ShellContent ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="ДнД" Icon="dnd.png">
+    <FlyoutItem Title="DnD" Icon="dnd.png">
         <ShellContent ContentTemplate="{DataTemplate views:DnDHubPage}" Route="DnDHubPage"/>
     </FlyoutItem>
 
@@ -25,6 +25,9 @@
 
     <FlyoutItem Title="Инструменты" Icon="tools.png">
         <ShellContent ContentTemplate="{DataTemplate views:ToolsHubPage}" Route="ToolsHubPage"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Инструменты" Icon="tools.png">
+        <ShellContent ContentTemplate="{DataTemplate views:PartyHubPage}" Route="PartyHubPage"/>
     </FlyoutItem>
 
 </Shell>

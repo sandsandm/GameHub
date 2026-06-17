@@ -4,6 +4,6 @@
              x:Class="GameHub.Views.Modules.RandomizerView">
     <VerticalStackLayout>
         <Label Text="Рандомайзер"/>
-        <Label Text="Выберите"></Label>
+        <Label Text="Выберите "></Label>
     </VerticalStackLayout>
 </ContentView>
