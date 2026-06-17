@@ -4,13 +4,27 @@
              x:Class="GameHub.Views.BoardGamesHubPage"
              Title="Настольные игры"
              xmlns:modules="clr-namespace:GameHub.Views.Modules">
-    <ScrollView>
-        <VerticalStackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition Width="*" />
+            
+            <ColumnDefinition Width="8*" />
+            
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+       
+    
+    <ScrollView BackgroundColor="White" Grid.Column="1">
+        <Border BackgroundColor="#f6f7e9" StrokeShape="RoundRectangle 10">
+            <VerticalStackLayout>
          
         <modules:PlayerRandomizerView/>
         <modules:DiceView></modules:DiceView>
 
         </VerticalStackLayout>
-        
+        </Border>
     </ScrollView>
+    </Grid>
 </ContentPage>
