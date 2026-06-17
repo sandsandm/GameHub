@@ -9,6 +9,6 @@
         <Label 
             Text="DnD"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -3,11 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.ChessHubPage"
              Title="Шахматы"
-             xmlns:modules="clr-namespace:GameHub.Views.Modules">
+             xmlns:modules="clr-namespace:GameHub.Views.Modules"
+             xmlns:views="clr-namespace:GameHub.Views">
     <VerticalStackLayout>
-        <Label 
-            Text="Chess"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <modules:TimerView BindingContext="{Binding TimerViewModel}" />
     </VerticalStackLayout>
 </ContentPage>
