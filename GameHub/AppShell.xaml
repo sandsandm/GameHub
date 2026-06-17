@@ -29,5 +29,5 @@
     <FlyoutItem Title="Инструменты" Icon="tools.png">
         <ShellContent ContentTemplate="{DataTemplate views:PartyHubPage}" Route="PartyHubPage"/>
     </FlyoutItem>
-
+       
 </Shell>
