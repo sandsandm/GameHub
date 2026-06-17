@@ -5,7 +5,7 @@ public partial class DiceView : ContentView
     private Random random = new Random();
     private List<string> history = new List<string>();
 
-    public void MainPage()
+    public DiceView()
     {
         InitializeComponent();
     }

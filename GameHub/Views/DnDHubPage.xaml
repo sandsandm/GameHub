@@ -2,11 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.DnDHubPage"
+              xmlns:modules="clr-namespace:GameHub.Views.Modules"
+             
              Title="DnDHubPage">
     <VerticalStackLayout>
         <Label 
             Text="DnD"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <modules:DiceView WidthRequest="800" 
+                         HeightRequest="500"
+                         Margin="10" />
+
     </VerticalStackLayout>
 </ContentPage>
