@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:views="clr-namespace:GameHub.Views"
+    
     xmlns:local="clr-namespace:GameHub"
     Title="GameHub">
     
@@ -29,5 +30,7 @@
     <FlyoutItem Title="Инструменты" Icon="tools.png">
         <ShellContent ContentTemplate="{DataTemplate views:PartyHubPage}" Route="PartyHubPage"/>
     </FlyoutItem>
-       
+    <FlyoutItem Title="Команда" Icon="Team.png">
+        <ShellContent ContentTemplate="{DataTemplate views:AddTeamPage}" Route="AddTeamPage"/>
+    </FlyoutItem>
 </Shell>

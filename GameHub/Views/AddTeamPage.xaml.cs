@@ -1,6 +1,6 @@
 using GameHub.Models;
 
-namespace GameHub.Views.Modules
+namespace GameHub.Views
 {
     public partial class AddTeamPage : ContentPage
     {
