@@ -27,7 +27,6 @@ public partial class DiceView : ContentView
     private void OnClearHistoryClicked(object sender, EventArgs e)
     {
         history.Clear();
-
         HistoryLabel.Text = "Нет истории";
         ResultLabel.Text = "?";
     }
