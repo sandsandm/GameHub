@@ -10,6 +10,9 @@
             Text="DnD"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 85ed08a0816780d923d7ba8edc42a4ea5cabef94
     </VerticalStackLayout>
 </ContentPage>
