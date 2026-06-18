@@ -10,17 +10,16 @@
         <Border Stroke="#89A3B4">
             <Grid>
                 <Grid.ColumnDefinitions>
-
                     <ColumnDefinition Width="*" />
 
                     <ColumnDefinition Width="8*" />
 
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+
                 <VerticalStackLayout Padding="30,60,30,30" Background="#f6f7e9" Grid.Column="1">
 
                     <modules:DiceView/>
-
 
                     <Label Text="Заметки" HorizontalOptions="Center" FontAttributes="Italic"/>
 
