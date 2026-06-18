@@ -30,7 +30,6 @@ public class TimerViewModel : BindableObject, IDisposable
         Sub30SecCommand = new Command(() => ChangeTime(-30));
         Sub1MinCommand = new Command(() => ChangeTime(-60));
 
-       
     }
 
     private void OnTimerElapsed(object sender, ElapsedEventArgs e)
@@ -52,11 +51,11 @@ public class TimerViewModel : BindableObject, IDisposable
 
         _remaining = _remaining.Add(TimeSpan.FromSeconds(seconds));
         OnPropertyChanged(nameof(DisplayTime));
-        
+
     }
 
     public string Title => "Game Timer";
-    public string DisplayTime => _remaining.ToString(@"mm\:ss\.ff");
+    public string DisplayTime => _remaining.ToString(@"mm\:ss");
     public ICommand StartCommand { get; }
     public ICommand PauseCommand { get; }
     public ICommand ResetCommand { get; }
