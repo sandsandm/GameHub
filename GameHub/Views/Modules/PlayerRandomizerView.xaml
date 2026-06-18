@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:GameHub"
              xmlns:viewmodel="clr-namespace:GameHub.ViewModels">
 
-    <Border>
+    
         <Grid Padding="20" RowSpacing="10" BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -31,7 +31,7 @@
            
             HorizontalOptions="Center" />
             <!-- ентри игрока -->
-            <HorizontalStackLayout Grid.Row="2" Spacing="10">
+            <HorizontalStackLayout Grid.Row="2" Spacing="10" Padding="20">
             <Entry x:Name="PlayerNameEntry" 
                    Placeholder="Введите имя игрока" 
                    Text="{Binding NewPlayerName, Mode=TwoWay}"
@@ -88,7 +88,7 @@
                HorizontalOptions="Center"
                TextColor="Gray"/>
 
-        <Button Grid.Row="5" 
+                <Button Grid.Row="5" 
                 Text="Выбрать случайного игрока" 
                 Command="{Binding SelectWinnerCommand}"
                 BackgroundColor="#676767"
@@ -121,5 +121,5 @@
         </VerticalStackLayout>
 
     </Grid>
-    </Border>
+    
 </ContentView>
