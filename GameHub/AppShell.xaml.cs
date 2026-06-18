@@ -7,6 +7,8 @@ namespace GameHub
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(Dice), typeof(Dice));
+            Routing.RegisterRoute(nameof(GamerRandom), typeof(GamerRandom));
+            Routing.RegisterRoute(nameof(TimerPage), typeof(TimerPage));
         }
     }
 }
