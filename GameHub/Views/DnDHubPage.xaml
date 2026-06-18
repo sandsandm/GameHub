@@ -5,35 +5,39 @@
              Title="DnD"
              xmlns:modules="clr-namespace:GameHub.Views.Modules"
              xmlns:local="clr-namespace:GameHub">
-    <VerticalStackLayout>
-        <Label 
-            Text="DnD"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"/>
-        <modules:DiceView/>
-        <VerticalStackLayout Padding="30,60,30,30" Background="Bisque">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="DnD"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+            <modules:DiceView/>
+            <VerticalStackLayout Padding="30,60,30,30">
 
-            <Label Text="Заметки"
-              HorizontalOptions="Center"
-              FontAttributes="Italic"/>
+                <Label Text="Заметки"
+                      HorizontalOptions="Center"
+                      FontAttributes="Italic"/>
 
-            <Editor x:Name="editor"
-               Placeholder="Введите вашу заметку"
-               HeightRequest="100"/>
+                <Editor x:Name="editor"
+                        Placeholder="Введите вашу заметку"
+                        HeightRequest="100"
+                        Margin="10"/>
 
-            <Grid ColumnDefinitions="Auto, 30, Auto" Margin="0, 10">
+                <Grid ColumnDefinitions="Auto, 30, Auto" Margin="0, 10">
 
-                <Button Grid.Column="0"
-                   Text="Сохранить" 
-                   WidthRequest="100"
-                   Clicked="OnSaveButtonClicked" />
+                    <Button Grid.Column="0"
+                           Text="Сохранить" 
+                           WidthRequest="100"
+                           Clicked="OnSaveButtonClicked" />
 
-                <Button Grid.Column="2"
-                   Text="Удалить" 
-                   WidthRequest="100"
-                   Clicked="OnDeleteButtonClicked"/>
-            </Grid>
+                    <Button Grid.Column="2"
+                           Text="Удалить" 
+                           WidthRequest="100"
+                           Clicked="OnDeleteButtonClicked"/>
+                </Grid>
 
+            </VerticalStackLayout>
         </VerticalStackLayout>
-    </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>

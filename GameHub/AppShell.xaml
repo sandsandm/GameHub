@@ -7,12 +7,6 @@
     
     xmlns:local="clr-namespace:GameHub"
     Title="GameHub">
-
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> 8166e702b815b985c681580e46d22e644cf1d173
     <FlyoutItem Title="Домашняя страница" Icon="home.png">
         <ShellContent ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage"/>
     </FlyoutItem>
