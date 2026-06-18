@@ -6,12 +6,17 @@ namespace GameHub.ViewModels;
 public class MainViewModel : ContentPage
 {
     public ICommand OpenChessCommand { get; }
+	public ICommand OpenDnDCommand { get; }
     public MainViewModel() 
 	{
 		OpenChessCommand = new Command(async () =>
 		{
 			await Shell.Current.GoToAsync("///ChessHubPage");
 		});
-		
+
+		OpenDnDCommand = new Command(async () =>
+		{
+			await Shell.Current.GoToAsync("///DnDHubPage");
+		});
 	}
 }
