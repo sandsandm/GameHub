@@ -90,6 +90,9 @@
 	  <MauiXaml Update="Views\ChessHubPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Dice.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\DnDHubPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

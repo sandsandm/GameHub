@@ -6,6 +6,7 @@ namespace GameHub
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(Dice), typeof(Dice));
         }
     }
 }

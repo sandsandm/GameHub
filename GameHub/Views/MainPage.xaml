@@ -6,7 +6,7 @@
              xmlns:modules="clr-namespace:GameHub.Views.Modules">
     <VerticalStackLayout>
         
-        <Grid  RowDefinitions="Auto,Auto,Auto,Auto,Auto,*" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="10" RowSpacing="10">
+        <Grid  RowDefinitions="*,*,*" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="10" RowSpacing="10">
             <Label 
                 Text="Популярные страницы"
                 VerticalOptions="Center" 
@@ -15,7 +15,18 @@
                 Grid.ColumnSpan="2"/>
             <Button Text="Открыть страницу шахмат" Command="{Binding OpenChessCommand}" Grid.Row="1" Grid.Column="0"/>
             <Button Text="Открыть страницу DnD" Command="{Binding OpenDnDCommand}" Grid.Row="1" Grid.Column="1"/>
+            <Button Text="Открыть страницу настольных игр" Command="{Binding OpenBoardGamesCommand}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>
-        
+        <Grid  RowDefinitions="auto,auto,auto" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="10" RowSpacing="10" Margin="10">
+            <Label 
+                Text="Популярные утилиты"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Row="0"
+                Grid.ColumnSpan="2"/>
+            <Button Text="Бросить кубик " Command="{Binding OpenDiceCommand}" Grid.Row="1" Grid.Column="0"/>
+            <Button Text="Рандомайзер игроков" Command="{Binding OpenGamerRandomCommand}" Grid.Row="1" Grid.Column="1"/>
+            <Button Text="Включить таймер" Command="{Binding OpenTimerCommand}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
