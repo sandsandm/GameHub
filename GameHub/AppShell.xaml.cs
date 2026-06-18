@@ -1,4 +1,5 @@
-﻿using GameHub.Views;
+﻿using GameHub.ViewModels;
+using GameHub.Views;
 namespace GameHub
 {
     public partial class AppShell : Shell
@@ -9,6 +10,8 @@ namespace GameHub
             Routing.RegisterRoute(nameof(Dice), typeof(Dice));
             Routing.RegisterRoute(nameof(GamerRandom), typeof(GamerRandom));
             Routing.RegisterRoute(nameof(TimerPage), typeof(TimerPage));
+
         }
+
     }
 }

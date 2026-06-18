@@ -12,11 +12,7 @@
                HorizontalOptions="Center"
                Margin="10"/>
         <HorizontalStackLayout>
-            <Button Text="Продолжить последний режим"
-                Command="{Binding ContinueCommand}" />
-
-            <Button Text="Случайный режим"
-                Command="{Binding RandomModeCommand}" />
+           
         </HorizontalStackLayout>
 
         <Grid RowDefinitions="AUTO,auto,auto" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="10" RowSpacing="10">
