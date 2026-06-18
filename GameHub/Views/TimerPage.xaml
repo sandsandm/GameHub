@@ -3,8 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.TimerPage"
              Title="TimerPage"
-             xmlns:modules="clr-namespace:GameHub.Views.Modules">
-    <VerticalStackLayout>
-        <modules:TimerView/>
-    </VerticalStackLayout>
+             xmlns:modules="clr-namespace:GameHub.Views.Modules" BackgroundColor="#98A9B9">
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="8*"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+            <VerticalStackLayout >
+            <modules:TimerView/>
+        </VerticalStackLayout>
+        </Border>
+    </Grid>
 </ContentPage>

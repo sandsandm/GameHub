@@ -54,7 +54,7 @@ public class TimerViewModel : BindableObject, IDisposable
 
     }
 
-    public string Title => "Game Timer";
+    public string Title => "Таймер";
     public string DisplayTime => _remaining.ToString(@"mm\:ss");
     public ICommand StartCommand { get; }
     public ICommand PauseCommand { get; }
