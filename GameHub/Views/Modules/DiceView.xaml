@@ -1,54 +1,59 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GameHub.Views.Modules.DiceView">
-    <ScrollView>
-        <Border StrokeShape="RoundRectangle 10" Stroke="White">
-            <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center" BackgroundColor="White">
+             x:Class="GameHub.Views.Modules.DiceView"
+             >
+    <ScrollView >
+        <Border >
+            
+                
+                
+                <Border StrokeShape="RoundRectangle 10" Stroke="White" >
+                    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center" BackgroundColor="White">
 
-                <Label Text="Вам выпало число:" 
+                        <Label Text="Вам выпало число:" 
                        FontSize="30" 
                        FontAttributes="Bold" 
                        HorizontalOptions="Center"
                        TextColor="Black" />
 
-                <Border Stroke="White"
+                        <Border Stroke="White"
                         HorizontalOptions="Center">
-                    <Label x:Name="ResultLabel" 
+                            <Label x:Name="ResultLabel" 
                            Text="?" 
                            FontSize="72" 
                            FontAttributes="Bold"
                            TextColor="#5E5F71"
                            HorizontalOptions="Center" />
-                </Border>
+                        </Border>
 
-                <!-- Выбор количества граней -->
-                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Label Text="Грани:" 
+                        <!-- Выбор количества граней -->
+                        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                            <Label Text="Грани:" 
                            FontSize="18" 
                            FontAttributes="Bold" 
                            VerticalOptions="Center"
                            TextColor="Black" />
 
-                    <Picker x:Name="DiceTypePicker" 
+                            <Picker x:Name="DiceTypePicker" 
                             
                             WidthRequest="150"
                             HeightRequest="30"
                             BackgroundColor="White"
                             TextColor="Black">
-                        <Picker.Items>
-                            <x:String>D6 (6 граней)</x:String>
-                            <x:String>D12 (12 граней)</x:String>
-                            <x:String>D20 (20 граней)</x:String>
-                            <x:String>D25 (25 граней)</x:String>
-                        </Picker.Items>
-                        <Picker.SelectedIndex>
-                            0
-                        </Picker.SelectedIndex>
-                    </Picker>
-                </HorizontalStackLayout>
+                                <Picker.Items>
+                                    <x:String>D6 (6 граней)</x:String>
+                                    <x:String>D12 (12 граней)</x:String>
+                                    <x:String>D20 (20 граней)</x:String>
+                                    <x:String>D25 (25 граней)</x:String>
+                                </Picker.Items>
+                                <Picker.SelectedIndex>
+                                    0
+                                </Picker.SelectedIndex>
+                            </Picker>
+                        </HorizontalStackLayout>
 
-                <Button x:Name="RollButton" 
+                        <Button x:Name="RollButton" 
                         Text="Бросить кубик" 
                         FontSize="24"
                         BackgroundColor="#98A9B9" 
@@ -57,25 +62,25 @@
                         HeightRequest="70"
                         Clicked="OnRollDiceClicked" />
 
-                <Border StrokeShape="RoundRectangle 10"
+                        <Border StrokeShape="RoundRectangle 10"
                         BackgroundColor="White"
                         Margin="0,20,0,0">
-                    <VerticalStackLayout>
-                        <Label Text="История бросков:" 
+                            <VerticalStackLayout>
+                                <Label Text="История бросков:" 
                                FontSize="16" 
                                FontAttributes="Bold" 
                                Margin="10,10,10,5" />
 
-                        <ScrollView HeightRequest="120">
-                            <Label x:Name="HistoryLabel" 
+                                <ScrollView HeightRequest="120">
+                                    <Label x:Name="HistoryLabel" 
                                    Text="Нет истории" 
                                    FontSize="14"
                                    Margin="10" />
-                        </ScrollView>
-                    </VerticalStackLayout>
-                </Border>
+                                </ScrollView>
+                            </VerticalStackLayout>
+                        </Border>
 
-                <Button x:Name="ClearHistoryButton" 
+                        <Button x:Name="ClearHistoryButton" 
                         Text="Очистить историю" 
                         FontSize="16"
                         BackgroundColor="#676767" 
@@ -83,7 +88,9 @@
                         CornerRadius="10"
                         Clicked="OnClearHistoryClicked" />
 
-            </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+           
         </Border>
     </ScrollView>
 </ContentView>

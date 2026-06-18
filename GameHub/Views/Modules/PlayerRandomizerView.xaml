@@ -5,7 +5,8 @@
              xmlns:local="clr-namespace:GameHub"
              xmlns:viewmodel="clr-namespace:GameHub.ViewModels">
 
-    <Grid Padding="20" RowSpacing="10" BackgroundColor="#f6f7e9">
+    <Border>
+        <Grid Padding="20" RowSpacing="10" BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -15,19 +16,22 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <Label Grid.Row="0" 
+        
+        <VerticalStackLayout>
+            <!--рандомайзер игроков-->
+            <Label Grid.Row="0" 
                Text="Рандомайзер игроков" 
-               FontSize="24" 
+               FontSize="30" 
                FontAttributes="Bold"
                HorizontalOptions="Center"/>
+            <!--поможет определить роль-->
         <Label Grid.Row="1" 
             Text="Поможет определить роль игрока" 
             FontSize="16" 
-            FontAttributes="Bold"
-            HorizontalOptions="Center"/>
-
-        <HorizontalStackLayout Grid.Row="2" Spacing="10">
+           
+            HorizontalOptions="Center" />
+            <!-- ентри игрока -->
+            <HorizontalStackLayout Grid.Row="2" Spacing="10">
             <Entry x:Name="PlayerNameEntry" 
                    Placeholder="Введите имя игрока" 
                    Text="{Binding NewPlayerName, Mode=TwoWay}"
@@ -36,11 +40,14 @@
 
             <Button Text="Добавить" 
                     Command="{Binding AddPlayerCommand}"
-                    BackgroundColor="#94E4E1"
+                    BackgroundColor="#98A9B9"
                     TextColor="White"/>
         </HorizontalStackLayout>
 
-        <CollectionView Grid.Row="3" 
+
+            <!--список игроков-->
+            <Border StrokeShape="RoundRectangle 10" >
+                <CollectionView Grid.Row="3" 
                        x:Name="PlayersCollection"
                        ItemsSource="{Binding Players}"
                        HeightRequest="200"
@@ -56,14 +63,14 @@
                         <Label Grid.Column="0" 
                                Text="{Binding Name}"
                                FontSize="16"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center" TextColor="#405163"/>
 
                         <Button Grid.Column="1" 
                                 Text="✕" 
                                 BackgroundColor="#f44336"
                                 TextColor="White"
-                                WidthRequest="30"
-                                HeightRequest="30"
+                                WidthRequest="20"
+                                HeightRequest="20"
                                 CornerRadius="15"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PlayerRandomizerViewModel}}, Path=BindingContext.RemovePlayerCommand}"
                                 CommandParameter="{Binding .}"/>
@@ -71,8 +78,11 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+            </Border>
 
-        <Label Grid.Row="4" 
+
+
+            <Label Grid.Row="4" 
                Text="{Binding PlayerCountText}"
                FontSize="14"
                HorizontalOptions="Center"
@@ -81,13 +91,13 @@
         <Button Grid.Row="5" 
                 Text="Выбрать случайного игрока" 
                 Command="{Binding SelectWinnerCommand}"
-                BackgroundColor="#5E5F71"
+                BackgroundColor="#676767"
                 TextColor="White"
                 FontSize="18"
-                IsEnabled="{Binding CanSelectWinner}"/>
+                IsEnabled="{Binding CanSelectWinner}" />
 
         <Border Grid.Row="6" 
-                Stroke="#94E4E1" 
+                Stroke="#405163" 
                 StrokeThickness="3"
                 Padding="20"
                 Margin="0,20,0,0"
@@ -95,7 +105,7 @@
                 VerticalOptions="Center"
                 StrokeShape="RoundRectangle 10">
             <StackLayout>
-                <Label Text="Избраннный игрок"
+                <Label Text="Выбранный игрок"
                        FontSize="20"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
@@ -108,5 +118,8 @@
                        TextColor="DimGray"/>
             </StackLayout>
         </Border>
+        </VerticalStackLayout>
+
     </Grid>
+    </Border>
 </ContentView>
