@@ -7,7 +7,7 @@ public class PlayerRandomizerViewModel : BaseViewModel
 {
     private string _newPlayerName;
     private string _winnerName;
-    private Random _random = new Random();
+    private readonly Random _random = new Random();
 
     public ObservableCollection<Player> Players { get; set; }
 
@@ -74,6 +74,11 @@ public class PlayerRandomizerViewModel : BaseViewModel
         {
             Players.Remove(player);
             WinnerName = string.Empty;
+
+            foreach (var p in Players)
+            {
+                p.IsSelected = false;
+            }
 
             OnPropertyChanged(nameof(PlayerCountText));
             OnPropertyChanged(nameof(CanSelectWinner));

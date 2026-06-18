@@ -6,7 +6,6 @@ namespace GameHub
         public AppShell()
         {
             InitializeComponent();
-
         }
     }
 }

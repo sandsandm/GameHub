@@ -3,13 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.TimerView">
     <VerticalStackLayout>
-        <Label Text="{Binding Title}" FontSize="24" HorizontalOptions="Center"/>
-        <Label Text="{Binding DisplayTime}" FontSize="48" HorizontalOptions="Center" />
+        <HorizontalStackLayout HorizontalOptions="Center">
+            
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+            
+                <Label Text="{Binding Title}" FontSize="24" HorizontalOptions="Center"/>
+                <Label Text="{Binding DisplayTime}" FontSize="48" HorizontalOptions="Center" />
 
-        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-            <Button Text="Start" Command="{Binding StartCommand}" />
-            <Button Text="Pause" Command="{Binding PauseCommand}" />
-            <Button Text="Reset" Command="{Binding ResetCommand}" />
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button Text="Start" Command="{Binding StartCommand}" BackgroundColor="DarkCyan" HeightRequest="20"/>
+                    <Button Text="Pause" Command="{Binding PauseCommand}" BackgroundColor="DarkCyan" HeightRequest="20"/>
+                    <Button Text="Reset" Command="{Binding ResetCommand}" BackgroundColor="#5E5F71" HeightRequest="20"/>
+                </HorizontalStackLayout>
+                <Label Text="Прибавить время"/>
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button Text="10 секунд" Command="{Binding Add10SecCommand}"/>
+                    <Button Text="30 секунд" Command="{Binding Add30SecCommand}"/>
+                    <Button Text="1 минута" Command="{Binding Add1MinCommand}"/>
+                </HorizontalStackLayout>
+                <Label Text="Убавить время"/>
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button Text="10 секунд" Command="{Binding Sub10SecCommand}"/>
+                    <Button Text="30 секунд" Command="{Binding Sub30SecCommand}"/>
+                    <Button Text="1 минута" Command="{Binding Sub1MinCommand}"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+      
         </HorizontalStackLayout>
+        
     </VerticalStackLayout>
 </ContentView>

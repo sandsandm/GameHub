@@ -6,6 +6,6 @@
              xmlns:modules="clr-namespace:GameHub.Views.Modules"
              xmlns:views="clr-namespace:GameHub.Views">
     <VerticalStackLayout>
-        <modules:TimerView BindingContext="{Binding TimerViewModel}" />
+        <modules:TimerView/>
     </VerticalStackLayout>
 </ContentPage>

@@ -6,6 +6,6 @@ public partial class TimerView : ContentView
 	public TimerView()
 	{
 		InitializeComponent();
-		
-	}
+        BindingContext = new TimerViewModel();
+    }
 }
