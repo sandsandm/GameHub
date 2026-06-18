@@ -5,27 +5,24 @@
              Title="Настольные игры"
              xmlns:modules="clr-namespace:GameHub.Views.Modules"
              BackgroundColor="#98A9B9">
-    <Grid>
+    <ScrollView>
+        <Grid >
         <Grid.ColumnDefinitions>
-            
-            <ColumnDefinition Width="*" />
-            
-            <ColumnDefinition Width="8*" />
-            
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
 
-       
-    
-    <ScrollView BackgroundColor="White" Grid.Column="1">
-            <Border BackgroundColor="#f6f7e9" StrokeShape="RoundRectangle 10" Stroke="White">
-            <VerticalStackLayout>
-         
-        <modules:PlayerRandomizerView/>
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="8*"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+            <VerticalStackLayout >
+
+                <modules:PlayerRandomizerView/>
         <modules:DiceView></modules:DiceView>
 
-        </VerticalStackLayout>
-        </Border>
-    </ScrollView>
+                </VerticalStackLayout>
+            </Border>
     </Grid>
+    </ScrollView>
 </ContentPage>

@@ -4,8 +4,20 @@
              x:Class="GameHub.Views.ChessHubPage"
              Title="Шахматы"
              xmlns:modules="clr-namespace:GameHub.Views.Modules"
-             xmlns:views="clr-namespace:GameHub.Views">
-    <VerticalStackLayout>
-        <modules:TimerView/>
-    </VerticalStackLayout>
+             xmlns:views="clr-namespace:GameHub.Views" BackgroundColor="#98A9B9">
+    <Grid >
+     <Grid.ColumnDefinitions>
+
+         <ColumnDefinition Width="*"/>
+
+         <ColumnDefinition Width="8*"/>
+
+         <ColumnDefinition Width="*"/>
+     </Grid.ColumnDefinitions>
+     <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+         <VerticalStackLayout >
+         <modules:TimerView/>
+     </VerticalStackLayout>
+     </Border>
+ </Grid>
 </ContentPage>
