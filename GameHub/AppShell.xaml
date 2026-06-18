@@ -7,27 +7,20 @@
     
     xmlns:local="clr-namespace:GameHub"
     Title="GameHub">
-    
+
     <FlyoutItem Title="Домашняя страница" Icon="home.png">
         <ShellContent ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage"/>
     </FlyoutItem>
-
     <FlyoutItem Title="DnD" Icon="dnd.png">
         <ShellContent ContentTemplate="{DataTemplate views:DnDHubPage}" Route="DnDHubPage"/>
     </FlyoutItem>
-
     <FlyoutItem Title="Шахматы" Icon="chess.png">
         <ShellContent ContentTemplate="{DataTemplate views:ChessHubPage}" Route="ChessHubPage"/>
     </FlyoutItem>
-
     <FlyoutItem Title="Настольные игры" Icon="boardgames.png">
         <ShellContent ContentTemplate="{DataTemplate views:BoardGamesHubPage}" Route="BoardGamesHubPage"/>
     </FlyoutItem>
-
-    <FlyoutItem Title="Инструменты" Icon="tools.png">
-        <ShellContent ContentTemplate="{DataTemplate views:ToolsHubPage}" Route="ToolsHubPage"/>
-    </FlyoutItem>
-    <FlyoutItem Title="Инструменты" Icon="tools.png">
+    <FlyoutItem Title="Party mode" Icon="tools.png">
         <ShellContent ContentTemplate="{DataTemplate views:PartyHubPage}" Route="PartyHubPage"/>
     </FlyoutItem>
     <FlyoutItem Title="Создание команды" Icon="Team.png">
@@ -35,5 +28,8 @@
     </FlyoutItem>
     <FlyoutItem Title="Тест зедина" Icon="Team.png">
         <ShellContent ContentTemplate="{DataTemplate views:ZedinTestPage}" Route="ZedinTestPage"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Инструменты" Icon="tools.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ToolsHubPage}" Route="ToolsHubPage"/>
     </FlyoutItem>
 </Shell>
