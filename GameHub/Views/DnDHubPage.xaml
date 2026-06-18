@@ -17,7 +17,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <VerticalStackLayout Padding="30,60,30,30" Background="#f6f7e9" Grid.Column="1">
+                <VerticalStackLayout Padding="30,60,30,30" Background="White" Grid.Column="1">
 
                     <modules:DiceView/>
 
@@ -25,11 +25,11 @@
 
                     <Editor x:Name="editor" Placeholder="Введите вашу заметку" HeightRequest="100"/>
 
-                    <Grid ColumnDefinitions="Auto, 30, Auto" Margin="0, 10">
+                    <Grid ColumnDefinitions="*, 30, *" Margin="0, 10">
 
-                        <Button Grid.Column="0" Text="Сохранить" WidthRequest="100" Clicked="OnSaveButtonClicked" BackgroundColor="#94E4E1"/>
+                        <Button Grid.Column="0" Text="Сохранить" WidthRequest="120" Clicked="OnSaveButtonClicked" BackgroundColor="#798776"/>
 
-                        <Button Grid.Column="2" Text="Удалить"  WidthRequest="100" Clicked="OnDeleteButtonClicked" BackgroundColor="DarkRed"/>
+                        <Button Grid.Column="2" Text="Удалить"  WidthRequest="120" Clicked="OnDeleteButtonClicked" BackgroundColor="DarkRed"/>
                     </Grid>
                 </VerticalStackLayout>
             </Grid>

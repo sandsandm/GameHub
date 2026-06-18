@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.DiceView">
     <ScrollView>
-        <Border StrokeShape="RoundRectangle 10" Stroke="#f6f7e9">
-            <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center" BackgroundColor="#f6f7e9">
+        <Border StrokeShape="RoundRectangle 10" Stroke="White">
+            <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center" BackgroundColor="White">
 
                 <Label Text="Вам выпало число:" 
                        FontSize="30" 
@@ -12,7 +12,7 @@
                        HorizontalOptions="Center"
                        TextColor="Black" />
 
-                <Border Stroke="#f6f7e9"
+                <Border Stroke="White"
                         HorizontalOptions="Center">
                     <Label x:Name="ResultLabel" 
                            Text="?" 
@@ -51,7 +51,7 @@
                 <Button x:Name="RollButton" 
                         Text="Бросить кубик" 
                         FontSize="24"
-                        BackgroundColor="#94E4E1" 
+                        BackgroundColor="#98A9B9" 
                         TextColor="White"
                         CornerRadius="15"
                         HeightRequest="70"
@@ -78,7 +78,7 @@
                 <Button x:Name="ClearHistoryButton" 
                         Text="Очистить историю" 
                         FontSize="16"
-                        BackgroundColor="Gray" 
+                        BackgroundColor="#676767" 
                         TextColor="White"
                         CornerRadius="10"
                         Clicked="OnClearHistoryClicked" />
