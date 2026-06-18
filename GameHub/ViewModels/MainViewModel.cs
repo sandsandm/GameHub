@@ -3,8 +3,21 @@ using System.Windows.Input;
 
 namespace GameHub.ViewModels;
 
-public class MainViewModel : ContentPage
+public class MainViewModel
 {
+    private readonly Random _random = new();
+
+    private readonly string[] _randomRoutes =
+    {
+		"///ChessHubPage",
+		"///DnDHubPage",
+		"///BoardGamesHubPage",
+		"///AddTeamPage",
+		"///DicePage",
+		"///GamerRandomPage",
+		"///PartyHubPage",
+		"///TimerPage"
+	};
     public ICommand OpenChessCommand { get; }
 	public ICommand OpenDnDCommand { get; }
 	public ICommand OpenBoardGamesCommand { get; }
@@ -28,7 +41,7 @@ public class MainViewModel : ContentPage
                 await Shell.Current.GoToAsync("///BoardGamesHubPage");
                 break;
 			case "addTeam":
-				await Shell.Current.GoToAsync("///AddTeampage");
+				await Shell.Current.GoToAsync("///AddTeamPage");
 				break;
 			case "dice":
 				await Shell.Current.GoToAsync(nameof(Dice));
@@ -40,16 +53,21 @@ public class MainViewModel : ContentPage
 				await Shell.Current.GoToAsync("///PartyHubPage");
 				break;
 			case "timer":
-				await Shell.Current.GoToAsync(nameof(Timer));
+				await Shell.Current.GoToAsync(nameof(TimerPage));
 				break;
 			default:
-                await Shell.Current.GoToAsync("///HomePage");
+                await Shell.Current.GoToAsync("///MainPage");
                 break;
 
         }
 	});
+    public ICommand RandomModeCommand { get; }
+
+
     public MainViewModel() 
 	{
+
+
 		//кнопки страниц
 		OpenChessCommand = new Command(async () =>
 		{
@@ -85,6 +103,14 @@ public class MainViewModel : ContentPage
         {
             await Shell.Current.GoToAsync(nameof(TimerPage));
         });
+
+		//рандомный режим
+        RandomModeCommand = new Command(async () =>
+        {
+            var route = _randomRoutes[_random.Next(_randomRoutes.Length)];
+            await Shell.Current.GoToAsync(route);
+        });
+
 
     }
 }
