@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace GameHub.Models
 {
-    public static class TeamStore
+   public static class TeamStore
     {
-        public static List<Team> Teams { get; set; } = new();
+        public static ObservableCollection<Team> Teams { get; set; } = new();
     }
 }

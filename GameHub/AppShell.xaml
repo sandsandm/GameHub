@@ -30,7 +30,10 @@
     <FlyoutItem Title="Инструменты" Icon="tools.png">
         <ShellContent ContentTemplate="{DataTemplate views:PartyHubPage}" Route="PartyHubPage"/>
     </FlyoutItem>
-    <FlyoutItem Title="Команда" Icon="Team.png">
+    <FlyoutItem Title="Создание команды" Icon="Team.png">
         <ShellContent ContentTemplate="{DataTemplate views:AddTeamPage}" Route="AddTeamPage"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Тест зедина" Icon="Team.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ZedinTestPage}" Route="ZedinTestPage"/>
     </FlyoutItem>
 </Shell>

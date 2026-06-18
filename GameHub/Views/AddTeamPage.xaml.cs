@@ -34,7 +34,17 @@ namespace GameHub.Views
             };
 
             TeamStore.Teams.Add(team);
-            await Navigation.PopAsync();
+
+            
+            TeamNameEntry.Text = "";
+            PlayerEntry.Text = "";
+            players.Clear();
+            PlayersList.ItemsSource = null;
+            PlayersList.ItemsSource = players;
+
+            await DisplayAlert("Готово", $"Команда «{team.Name}» сохранена", "ОК");
+
+            
         }
     }
 }

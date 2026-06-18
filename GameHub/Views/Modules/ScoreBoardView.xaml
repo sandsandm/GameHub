@@ -3,25 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.ScoreBoardView">
 
-    <Border Stroke="Gray"
+    <Border Stroke="#94E4E1"
+            BackgroundColor="#f6f7e9"
             StrokeThickness="1"
             Padding="10"
             StrokeShape="RoundRectangle 10">
-
         <CollectionView x:Name="TeamsList">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" ColumnDefinitions="*,100">
-                        <Label Grid.Column="0"
-                               Text="{Binding Name}"
-                               VerticalOptions="Center"
-                               FontSize="16" />
+                    <VerticalStackLayout Spacing="6" Padding="10">
 
-                        <Entry Grid.Column="1"
-                               Text="{Binding Score}"
-                               Keyboard="Numeric"
-                               TextChanged="OnScoreChanged" />
-                    </Grid>
+                       
+                        <Grid ColumnDefinitions="*,100">
+                            <Label Grid.Column="0"
+                                   Text="{Binding Name}"
+                                   VerticalOptions="Center"
+                                   FontSize="16"
+                                   FontAttributes="Bold" />
+                            <Entry Grid.Column="1"
+                                   Text="{Binding Score}"
+                                   Keyboard="Numeric"
+                                   TextChanged="OnScoreChanged" BackgroundColor="White" VerticalOptions="Center"/>
+                        </Grid>
+
+                       
+                        <CollectionView ItemsSource="{Binding Players}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding .}"
+                                           FontSize="13"
+                                           TextColor="Gray" />
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        
+                    </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
