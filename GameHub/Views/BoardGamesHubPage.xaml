@@ -17,7 +17,7 @@
        
     
     <ScrollView BackgroundColor="White" Grid.Column="1">
-        <Border BackgroundColor="#f6f7e9" StrokeShape="RoundRectangle 10">
+            <Border BackgroundColor="#f6f7e9" StrokeShape="RoundRectangle 10" Stroke="#5E5F71">
             <VerticalStackLayout>
          
         <modules:PlayerRandomizerView/>

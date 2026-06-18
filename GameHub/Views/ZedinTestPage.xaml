@@ -6,7 +6,7 @@
              xmlns:modules="clr-namespace:GameHub.Views.Modules">
     <VerticalStackLayout>
         <ScrollView>
-            
+            <modules:ScoreBoardView></modules:ScoreBoardView>
         </ScrollView>
     </VerticalStackLayout>
 </ContentPage>
