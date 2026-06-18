@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.ScoreBoardView">
 
-    <Border Stroke="#94E4E1"
+    <Border Stroke="#f6f7e9"
             BackgroundColor="#f6f7e9"
             StrokeThickness="1"
             Padding="10"
@@ -18,25 +18,31 @@
                             <Label Grid.Column="0"
                                    Text="{Binding Name}"
                                    VerticalOptions="Center"
-                                   FontSize="16"
-                                   FontAttributes="Bold" />
+                                   FontSize="26"
+                                   FontAttributes="Bold"
+                                   TextColor="#5E5F71"/>
                             <Entry Grid.Column="1"
                                    Text="{Binding Score}"
                                    Keyboard="Numeric"
                                    TextChanged="OnScoreChanged" BackgroundColor="White" VerticalOptions="Center"/>
                         </Grid>
-
-                       
-                        <CollectionView ItemsSource="{Binding Players}">
+                        
+                        <Label Text="Список команды" FontAttributes="Bold" FontSize="16"/>
+                        
+                        <Border BackgroundColor="White" StrokeShape="RoundRectangle 10">
+                            
+                            <CollectionView ItemsSource="{Binding Players}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Label Text="{Binding .}"
+                                    
+                                        <Label Text="{Binding .}"
                                            FontSize="13"
-                                           TextColor="Gray" />
+                                           TextColor="#5E5F71" HeightRequest="30" VerticalOptions="Center"/>
+                                    
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
-                        
+                        </Border>
                     </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
