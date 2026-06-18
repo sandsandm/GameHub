@@ -6,7 +6,17 @@
              xmlns:modules="clr-namespace:GameHub.Views.Modules">
     <VerticalStackLayout>
         <ScrollView>
-            <modules:ScoreBoardView></modules:ScoreBoardView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="8*" />
+
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <modules:ScoreBoardView></modules:ScoreBoardView>
+            </Grid>
         </ScrollView>
     </VerticalStackLayout>
 </ContentPage>
