@@ -2,17 +2,33 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.AddTeamPage"
-             Title="Добавить команду">
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="10">
-            <Entry x:Name="TeamNameEntry" Placeholder="Название команды" />
+             Title="Добавить команду" BackgroundColor="#1e3c72" >
+    <ScrollView BackgroundColor="#94E4E1">
+        <Grid>
+            <Grid.ColumnDefinitions>
 
-            <Entry x:Name="PlayerEntry" Placeholder="Имя игрока" />
-            <Button Text="Добавить игрока" Clicked="OnAddPlayerClicked" />
+                <ColumnDefinition Width="*"/>
 
-            <CollectionView x:Name="PlayersList" />
+                <ColumnDefinition Width="8*"/>
 
-            <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" />
-        </VerticalStackLayout>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Border Grid.Column="1" BackgroundColor="#f6f7e9" Stroke="#f6f7e9" StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout Padding="20" Spacing="10" >
+                
+                    
+                <Entry x:Name="TeamNameEntry" Placeholder="Название команды" BackgroundColor="White"/>
+
+                <Entry x:Name="PlayerEntry" Placeholder="Имя игрока" BackgroundColor="White" />
+                    <Button Text="Добавить игрока" Clicked="OnAddPlayerClicked" BackgroundColor="#2dc8c3" />
+
+                <CollectionView x:Name="PlayersList" />
+
+                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#2dc8c3" />
+ 
+            </VerticalStackLayout>
+            </Border>
+        </Grid>
     </ScrollView>
 </ContentPage>
