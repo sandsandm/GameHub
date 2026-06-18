@@ -5,6 +5,7 @@
              Title="DnD"
              xmlns:modules="clr-namespace:GameHub.Views.Modules"
              xmlns:local="clr-namespace:GameHub">
+<<<<<<< HEAD
     <ScrollView BackgroundColor="#89A3B4">
         <Border Stroke="#89A3B4">
             <Grid>
@@ -35,4 +36,41 @@
         </Grid>
         </Border>
     </ScrollView>
+=======
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="DnD"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+            <modules:DiceView/>
+            <VerticalStackLayout Padding="30,60,30,30">
+
+                <Label Text="Заметки"
+                      HorizontalOptions="Center"
+                      FontAttributes="Italic"/>
+
+                <Editor x:Name="editor"
+                        Placeholder="Введите вашу заметку"
+                        HeightRequest="100"
+                        Margin="10"/>
+
+                <Grid ColumnDefinitions="Auto, 30, Auto" Margin="0, 10">
+
+                    <Button Grid.Column="0"
+                           Text="Сохранить" 
+                           WidthRequest="100"
+                           Clicked="OnSaveButtonClicked" />
+
+                    <Button Grid.Column="2"
+                           Text="Удалить" 
+                           WidthRequest="100"
+                           Clicked="OnDeleteButtonClicked"/>
+                </Grid>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+>>>>>>> eeae7833a455fa4122a507904925c7115940bb94
 </ContentPage>
