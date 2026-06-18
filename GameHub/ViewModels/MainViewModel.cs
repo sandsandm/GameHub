@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace GameHub.ViewModels;
 
-public class MainViewModel : INotifyPropertyChanged
+public class MainViewModel 
 {
     public ICommand OpenChessCommand { get; }
     public ICommand OpenDnDCommand { get; }
@@ -55,7 +55,6 @@ public class MainViewModel : INotifyPropertyChanged
             await NavigateToAsync(nameof(TimerPage));
         });
 
-        
     }
     private async Task NavigateToAsync(string pageName)
     {
@@ -63,10 +62,4 @@ public class MainViewModel : INotifyPropertyChanged
         
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
 }
