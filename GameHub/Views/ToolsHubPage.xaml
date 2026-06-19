@@ -21,7 +21,7 @@
 
         <Border Stroke="White" BackgroundColor="White" StrokeShape="RoundRectangle 10" Grid.Column="1">
             <VerticalStackLayout>
-                <Label Text="Набор утилит" HorizontalOptions="Center"/>
+                <Label Text="Набор утилит" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold"/>
                 <Label Text="Все утилиты в одном месте" HorizontalOptions="Center" />
                 <Grid ColumnSpacing="10" RowSpacing="10" Margin="20" Padding="10">
                     <Grid.RowDefinitions>
