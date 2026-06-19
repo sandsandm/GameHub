@@ -18,6 +18,7 @@
             <VerticalStackLayout >
                 <modules:ScoreBoardView/>
                 <Label Text="Сначала создайте команду :P" TextColor="#676767" FontAttributes="Italic" FontSize="14" HorizontalOptions="Center"/>
+                <Button Text="Создать команду" Command="{Binding OpenTeamCommand}" Grid.Row="1" Grid.Column="1" BackgroundColor="#798776"/>
             </VerticalStackLayout>
         </Border>
     </Grid>
