@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.AddTeamPage"
              Title="Добавить команду" BackgroundColor="#98A9B9" >
-    <ScrollView >
+    <ScrollView>
         <Grid>
             <Grid.ColumnDefinitions>
 
@@ -30,7 +30,7 @@
 
                 <CollectionView x:Name="PlayersList" />
 
-                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#798776" Margin="0 0 20 0"/>
+                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#798776" Margin="0,0,20,0"/>
  
             </VerticalStackLayout>
             </Border>
