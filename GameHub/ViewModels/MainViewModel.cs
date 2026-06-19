@@ -16,7 +16,7 @@ public class MainViewModel
 		"///DicePage",
 		"///GamerRandomPage",
 		"///PartyHubPage",
-		"///TimerPage"
+		"TimerPage"
 	};
     public ICommand OpenChessCommand { get; }
 	public ICommand OpenDnDCommand { get; }
@@ -66,8 +66,6 @@ public class MainViewModel
 
     public MainViewModel() 
 	{
-
-
 		//кнопки страниц
 		OpenChessCommand = new Command(async () =>
 		{
