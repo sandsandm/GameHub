@@ -2,41 +2,83 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.MainPage"
-             Title="Домашняя страница"
-             xmlns:modules="clr-namespace:GameHub.Views.Modules">
-    <FlexLayout Direction="Column"
-    JustifyContent="SpaceEvenly"
-    AlignItems="Center">
-        
-        <Label Text="Все игровые инструменты в одном хабе.Шахматы, DnD, настолки и командные игры. Таймеры, кубики, рандомайзер, счетчик очков и другое — всегда под рукой" 
-               HorizontalOptions="Center"
-               Margin="10"/>
+             Title="Главная"
+             xmlns:modules="clr-namespace:GameHub.Views.Modules" BackgroundColor="#98A9B9">
    
-        <Grid  RowDefinitions="AUTO,auto,auto" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="10" RowSpacing="10">
-            <Label 
-                Text="Популярные страницы"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" 
-                Grid.Row="0"
-                Grid.ColumnSpan="2"/>
-            <Button Text="Открыть страницу шахмат" Command="{Binding OpenChessCommand}" Grid.Row="1" Grid.Column="0"/>
-            <Button Text="Открыть страницу DnD" Command="{Binding OpenDnDCommand}" Grid.Row="1" Grid.Column="1"/>
-            <Button Text="Открыть страницу настольных игр" Command="{Binding OpenBoardGamesCommand}" Grid.Row="2" Grid.Column="0"/>
-            <Button Text="Определить команды" Command="{Binding OpenTeamCommand}" Grid.Row="2" Grid.Column="1" />
-        </Grid>
         
-        
-        <Grid  RowDefinitions="auto,auto,auto" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" ColumnSpacing="10" RowSpacing="10" Margin="10">
-            <Label 
-                Text="Популярные утилиты"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" 
-                Grid.Row="0"
-                Grid.ColumnSpan="2"/>
-            <Button Text="Бросить кубик " Command="{Binding OpenDiceCommand}" Grid.Row="1" Grid.Column="0"/>
-            <Button Text="Рандомайзер игроков" Command="{Binding OpenGamerRandomCommand}" Grid.Row="1" Grid.Column="1"/>
-            <Button Text="Включить таймер" Command="{Binding OpenTimerCommand}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-        </Grid>
+      
+        <Grid RowSpacing="20">
+            <Grid.ColumnDefinitions>
 
-    </FlexLayout>
+                <ColumnDefinition Width="*"/>
+
+                <ColumnDefinition Width="8*"/>
+
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+            <Border Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10" >
+
+
+
+            <VerticalStackLayout Spacing="20">
+
+                <Label Text="Все игровые инструменты в одном хабе.Шахматы, DnD, настолки и командные игры. Таймеры, кубики, рандомайзер, счетчик очков и другое — всегда под рукой" 
+               HorizontalOptions="Center"
+               Margin="10" FontAttributes="Bold" FontSize="20"/>
+
+
+
+                <Grid  RowSpacing="10" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Популярные режимы" Grid.Column="1" FontSize="18" />
+                    
+                    <Button Text="Открыть страницу шахмат" Command="{Binding OpenChessCommand}" Grid.Row="1" Grid.Column="1" BackgroundColor="#798776"/>
+                    <Button Text="Открыть страницу DnD" Command="{Binding OpenDnDCommand}" Grid.Row="1" Grid.Column="2" BackgroundColor="#798776"/>
+                    <Button Text="Открыть страницу настольных игр" Command="{Binding OpenBoardGamesCommand}" Grid.Row="2" Grid.Column="1" BackgroundColor="#798776"/>
+                    <Button Text="Определить команды" Command="{Binding OpenTeamCommand}" Grid.Row="2" Grid.Column="2"  BackgroundColor="#798776"/>
+
+                </Grid>
+
+                <Grid RowSpacing="10" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Популярные инструменты" Grid.Column="1" FontSize="18"/>
+                    <Button Text="Бросить кубик " Command="{Binding OpenDiceCommand}" Grid.Row="1" Grid.Column="1" BackgroundColor="#6A7F9A"/>
+                    <Button Text="Рандомайзер игроков" Command="{Binding OpenGamerRandomCommand}" Grid.Row="1" Grid.Column="2" BackgroundColor="#6A7F9A"/>
+                    <Button Text="Включить таймер" Command="{Binding OpenTimerCommand}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="#6A7F9A"/>
+
+                </Grid>
+
+                         </VerticalStackLayout>
+                </Border>
+        </Grid>
+ 
+  
 </ContentPage>

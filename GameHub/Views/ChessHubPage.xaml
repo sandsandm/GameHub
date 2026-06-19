@@ -14,7 +14,11 @@
 
          <ColumnDefinition Width="*"/>
      </Grid.ColumnDefinitions>
-     <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Padding="40" Grid.Column="1"  BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
          <VerticalStackLayout >
          <modules:TimerView/>
                 <modules:ChessCount/>

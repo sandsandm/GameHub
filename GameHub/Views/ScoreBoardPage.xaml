@@ -3,9 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.ScoreBoardPage"
              Title="ScoreBoardPage"
-             
-             xmlns:modules="clr-namespace:GameHub.Views.Modules">
-    <VerticalStackLayout>
-        <modules:ScoreBoardView/>
-    </VerticalStackLayout>
+             xmlns:modules="clr-namespace:GameHub.Views.Modules"  
+             BackgroundColor="#98A9B9">
+    <Grid >
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="8*"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+            <VerticalStackLayout >
+                <modules:ScoreBoardView/>
+                <Label Text="Сначала создайте команду :P" TextColor="#676767" FontAttributes="Italic" FontSize="14" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
 </ContentPage>

@@ -18,9 +18,6 @@
     <FlyoutItem Title="Настольные игры" Icon="boardgames.png">
         <ShellContent ContentTemplate="{DataTemplate views:BoardGamesHubPage}" Route="BoardGamesHubPage"/>
     </FlyoutItem>
-    <FlyoutItem Title="Party mode" Icon="tools.png">
-        <ShellContent ContentTemplate="{DataTemplate views:PartyHubPage}" Route="PartyHubPage"/>
-    </FlyoutItem>
     <FlyoutItem Title="Создание команды" Icon="Team.png">
         <ShellContent ContentTemplate="{DataTemplate views:AddTeamPage}" Route="AddTeamPage"/>
     </FlyoutItem>

@@ -5,9 +5,12 @@
              Title="DnD"
              xmlns:modules="clr-namespace:GameHub.Views.Modules"
              xmlns:local="clr-namespace:GameHub">
-
     <ScrollView BackgroundColor="#89A3B4">
-        <Border Stroke="#89A3B4">
+        
+       
+    
+    
+        
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -15,6 +18,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
+            <Border Stroke="#89A3B4" StrokeShape="RoundRectangle 10" Grid.Column="1">
                 <VerticalStackLayout Padding="30,60,30,30" Background="White" Grid.Column="1">
 
                     <modules:DiceView/>
@@ -44,7 +48,8 @@
                     </CollectionView>
 
                 </VerticalStackLayout>
-            </Grid>
-        </Border>
+            </Border>
+        </Grid>
+        
     </ScrollView>
 </ContentPage>
