@@ -7,7 +7,7 @@ public class CoinViewModel : BindableObject
     public ICommand FlipCommand { get; }
 	private readonly Random _random = new();
     private List<string> history = new List<string>();
-    private string _result = "Здесь появится монетка";
+    private string _result = "";
     public string Result
     {
         get => _result;
