@@ -19,6 +19,7 @@
             </Grid.RowDefinitions>
             <Border Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout Padding="20" Spacing="10" >
+                    <Label Text="Создание команд" TextColor="#676767" FontSize="20"/>
 
                     <Border StrokeShape="RoundRectangle 10" Stroke="#676767">
                         <Entry x:Name="TeamNameEntry" Placeholder="Название команды" BackgroundColor="White"/>
@@ -30,7 +31,7 @@
 
                 <CollectionView x:Name="PlayersList" />
 
-                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#798776" Margin="0,0,20,0"/>
+                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#798776" Margin="0,0,0,20"/>
  
             </VerticalStackLayout>
             </Border>

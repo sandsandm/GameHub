@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.ScoreBoardPage"
-             Title="ScoreBoardPage"
+             Title="Счетчик очков"
              xmlns:modules="clr-namespace:GameHub.Views.Modules"  
              BackgroundColor="#98A9B9">
     <Grid >
@@ -19,7 +19,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
-            <VerticalStackLayout >
+            <VerticalStackLayout Spacing="20" >
                 <modules:ScoreBoardView/>
                 <Label Text="Сначала создайте команду :P" TextColor="#676767" FontAttributes="Italic" FontSize="14" HorizontalOptions="Center"/>
                 <Button Text="Создать команду" Command="{Binding OpenTeamCommand}" Grid.Row="1" Grid.Column="1" BackgroundColor="#798776"/>
