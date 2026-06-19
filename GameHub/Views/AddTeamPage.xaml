@@ -13,7 +13,10 @@
 
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Border Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout Padding="20" Spacing="10" >
 
@@ -21,13 +24,13 @@
                         <Entry x:Name="TeamNameEntry" Placeholder="Название команды" BackgroundColor="White"/>
                     </Border>
                     <Border StrokeShape="RoundRectangle 10" Stroke="#676767">
-                    <Entry x:Name="PlayerEntry" Placeholder="Имя игрока" BackgroundColor="White" />
+                    <Entry x:Name="PlayerEntry" Placeholder="Имя игрока (необязательное поле)" BackgroundColor="White" />
                     </Border>
                     <Button Text="Добавить игрока" Clicked="OnAddPlayerClicked" BackgroundColor="#BCBEB0" />
 
                 <CollectionView x:Name="PlayersList" />
 
-                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#798776" />
+                    <Button Text="Сохранить команду" Clicked="OnSaveTeamClicked" BackgroundColor="#798776" Margin="0 0 20 0"/>
  
             </VerticalStackLayout>
             </Border>

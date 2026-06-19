@@ -13,6 +13,10 @@
 
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
         <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
             <VerticalStackLayout >
             <modules:TimerView/>

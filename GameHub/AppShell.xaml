@@ -21,7 +21,7 @@
     <FlyoutItem Title="Создание команды" Icon="Team.png">
         <ShellContent ContentTemplate="{DataTemplate views:AddTeamPage}" Route="AddTeamPage"/>
     </FlyoutItem>
-    <FlyoutItem Title="Тест зедина" Icon="Team.png" >
+    <FlyoutItem Title="Подброс монетки" Icon="Team.png" >
         <ShellContent ContentTemplate="{DataTemplate views:ZedinTestPage}" Route="ZedinTestPage" />
     </FlyoutItem>
     <FlyoutItem Title="Инструменты" Icon="tools.png">
