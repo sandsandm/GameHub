@@ -105,6 +105,9 @@
 	  <MauiXaml Update="Views\Modules\ChessCount.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Modules\Coin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Modules\DiceView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

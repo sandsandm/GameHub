@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.ZedinTestPage"
-             Title="ZedinTestPage"
+             Title="Монеточка"
              xmlns:modules="clr-namespace:GameHub.Views.Modules" BackgroundColor="#98A9B9">
     <ScrollView>
         <Grid >
@@ -14,12 +14,12 @@
 
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Border Padding="40" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10" Margin="10">
                 <VerticalStackLayout >
-
-                    <modules:ScoreBoardView/>
-                    
-
+                    <modules:Coin/>
                 </VerticalStackLayout>
             </Border>
         </Grid>

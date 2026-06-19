@@ -7,19 +7,6 @@ namespace GameHub.ViewModels;
 
 public class MainViewModel 
 {
-    private readonly Random _random = new();
-
-    private readonly string[] _randomRoutes =
-    {
-		"///ChessHubPage",
-		"///DnDHubPage",
-		"///BoardGamesHubPage",
-		"///AddTeamPage",
-		"///DicePage",
-		"///GamerRandomPage",
-		"///PartyHubPage",
-		"TimerPage"
-	};
     public ICommand OpenChessCommand { get; }
     public ICommand OpenDnDCommand { get; }
     public ICommand OpenBoardGamesCommand { get; }
