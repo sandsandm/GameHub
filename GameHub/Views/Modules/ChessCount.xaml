@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameHub.Views.Modules.ChessCount"
+             >
+
+    <VerticalStackLayout Margin="10">
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
+            <VerticalStackLayout>
+                <Label Text="Команда 1"
+                   HorizontalOptions="Center"
+                       TextColor="#676767"
+                       FontAttributes="Bold"/>
+                <Label Text="{Binding Team1Score}"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                       TextColor="#676767"
+                       FontAttributes="Bold"/>
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Button Text="-1" Command="{Binding Team1MinusCommand}" BackgroundColor="#405163"/>
+                    <Button Text="+1" Command="{Binding Team1PlusCommand}" BackgroundColor="#405163"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="1">
+                <Label Text="Команда 2"
+                   HorizontalOptions="Center" 
+                       TextColor="#676767"
+                    FontAttributes="Bold"/>
+                <Label Text="{Binding Team2Score}"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                       TextColor="#676767"
+                    FontAttributes="Bold"/>
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Button Text="-1" Command="{Binding Team2MinusCommand}" BackgroundColor="#405163" />
+                    <Button Text="+1" Command="{Binding Team2PlusCommand}" BackgroundColor="#405163" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+        <Button Text="Сброс"
+                Command="{Binding ResetCommand}"
+                Margin="10" BackgroundColor="#8B0000"/>
+    </VerticalStackLayout>
+</ContentView>

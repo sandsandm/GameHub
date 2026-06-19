@@ -17,7 +17,8 @@
      <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
          <VerticalStackLayout >
          <modules:TimerView/>
-     </VerticalStackLayout>
+                <modules:ChessCount/>
+            </VerticalStackLayout>
      </Border>
  </Grid>
 </ContentPage>

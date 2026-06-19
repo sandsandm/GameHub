@@ -7,7 +7,6 @@ namespace GameHub.ViewModels;
 
 public class MainViewModel 
 {
-<<<<<<< HEAD
     private readonly Random _random = new();
 
     private readonly string[] _randomRoutes =
@@ -21,8 +20,6 @@ public class MainViewModel
 		"///PartyHubPage",
 		"TimerPage"
 	};
-=======
->>>>>>> 4d8c60b992de6f9890192367213ed58df3823835
     public ICommand OpenChessCommand { get; }
     public ICommand OpenDnDCommand { get; }
     public ICommand OpenBoardGamesCommand { get; }
@@ -32,53 +29,52 @@ public class MainViewModel
     public ICommand OpenTeamCommand { get; }
   
     public MainViewModel() 
-<<<<<<< HEAD
 	{
 		//кнопки страниц
 		OpenChessCommand = new Command(async () =>
 		{
 			await Shell.Current.GoToAsync("///ChessHubPage");
 		});
-=======
-    {
 
-        // Кнопки страниц
-        OpenChessCommand = new Command(async () =>
         {
-            await NavigateToAsync("///ChessHubPage");
-        });
+            // Кнопки страниц
+            OpenChessCommand = new Command(async () =>
+            {
+                await NavigateToAsync("///ChessHubPage");
+            });
 
-        OpenDnDCommand = new Command(async () =>
-        {
-            await NavigateToAsync("///DnDHubPage");
-        });
->>>>>>> 4d8c60b992de6f9890192367213ed58df3823835
+            OpenDnDCommand = new Command(async () =>
+            {
+                await NavigateToAsync("///DnDHubPage");
+            });
 
-        OpenBoardGamesCommand = new Command(async () =>
-        {
-            await NavigateToAsync("///BoardGamesHubPage");
-        });
 
-        OpenTeamCommand = new Command(async () =>
-        {
-            await NavigateToAsync("///AddTeamPage");
-        });
+            OpenBoardGamesCommand = new Command(async () =>
+            {
+                await NavigateToAsync("///BoardGamesHubPage");
+            });
 
-        // Кнопки утилит
-        OpenDiceCommand = new Command(async () =>
-        {
-            await NavigateToAsync(nameof(Dice));
-        });
+            OpenTeamCommand = new Command(async () =>
+            {
+                await NavigateToAsync("///AddTeamPage");
+            });
 
-        OpenGamerRandomCommand = new Command(async () =>
-        {
-            await NavigateToAsync(nameof(GamerRandom));
-        });
+            // Кнопки утилит
+            OpenDiceCommand = new Command(async () =>
+            {
+                await NavigateToAsync(nameof(Dice));
+            });
 
-        OpenTimerCommand = new Command(async () =>
-        {
-            await NavigateToAsync(nameof(TimerPage));
-        });
+            OpenGamerRandomCommand = new Command(async () =>
+            {
+                await NavigateToAsync(nameof(GamerRandom));
+            });
+
+            OpenTimerCommand = new Command(async () =>
+            {
+                await NavigateToAsync(nameof(TimerPage));
+            });
+        }
 
     }
     private async Task NavigateToAsync(string pageName)
