@@ -11,21 +11,21 @@
                 <Label Text="{Binding DisplayTime}" FontSize="48" HorizontalOptions="Center" />
 
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Button Text="Start" Command="{Binding StartCommand}" BackgroundColor="DarkCyan" HeightRequest="20"/>
-                    <Button Text="Pause" Command="{Binding PauseCommand}" BackgroundColor="DarkCyan" HeightRequest="20"/>
-                    <Button Text="Reset" Command="{Binding ResetCommand}" BackgroundColor="#5E5F71" HeightRequest="20"/>
+                    <Button Text="Старт" Command="{Binding StartCommand}" BackgroundColor="#798776" HeightRequest="20"/>
+                    <Button Text="Пауза" Command="{Binding PauseCommand}" BackgroundColor="DarkRed" HeightRequest="20"/>
+                    <Button Text="Сбросить" Command="{Binding ResetCommand}" BackgroundColor="#5E5F71" HeightRequest="20"/>
                 </HorizontalStackLayout>
-                <Label Text="Прибавить время"/>
+                <Label Text="Прибавить время" FontAttributes="Bold" FontSize="20" TextColor="#676767"/>
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Button Text="10 секунд" Command="{Binding Add10SecCommand}"/>
-                    <Button Text="30 секунд" Command="{Binding Add30SecCommand}"/>
-                    <Button Text="1 минута" Command="{Binding Add1MinCommand}"/>
+                    <Button Text="10 секунд" Command="{Binding Add10SecCommand}" BackgroundColor="#98A9B9"/>
+                    <Button Text="30 секунд" Command="{Binding Add30SecCommand}" BackgroundColor="#6A7F9A"/>
+                    <Button Text="1 минута" Command="{Binding Add1MinCommand}" BackgroundColor="#405163"/>
                 </HorizontalStackLayout>
-                <Label Text="Убавить время"/>
+                <Label Text="Убавить время" FontAttributes="Bold" FontSize="20" TextColor="#676767"/>
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Button Text="10 секунд" Command="{Binding Sub10SecCommand}"/>
-                    <Button Text="30 секунд" Command="{Binding Sub30SecCommand}"/>
-                    <Button Text="1 минута" Command="{Binding Sub1MinCommand}"/>
+                    <Button Text="10 секунд" Command="{Binding Sub10SecCommand}" BackgroundColor="#98A9B9"/>
+                    <Button Text="30 секунд" Command="{Binding Sub30SecCommand}" BackgroundColor="#6A7F9A"/>
+                    <Button Text="1 минута" Command="{Binding Sub1MinCommand}" BackgroundColor="#405163"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
 

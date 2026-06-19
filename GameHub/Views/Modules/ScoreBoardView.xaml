@@ -3,50 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.ScoreBoardView">
 
-    <Border Stroke="#f6f7e9"
-            BackgroundColor="#f6f7e9"
+    <Border Stroke="White"
+            BackgroundColor="White"
             StrokeThickness="1"
             Padding="10"
             StrokeShape="RoundRectangle 10">
-        <CollectionView x:Name="TeamsList">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <VerticalStackLayout Spacing="6" Padding="10">
 
-                       
-                        <Grid ColumnDefinitions="*,100">
-                            <Label Grid.Column="0"
-                                   Text="{Binding Name}"
-                                   VerticalOptions="Center"
-                                   FontSize="26"
-                                   FontAttributes="Bold"
-                                   TextColor="#5E5F71"/>
-                            <Entry Grid.Column="1"
-                                   Text="{Binding Score}"
-                                   Keyboard="Numeric"
-                                   TextChanged="OnScoreChanged" BackgroundColor="White" VerticalOptions="Center"/>
-                        </Grid>
-                        
-                        <Label Text="Список команды" FontAttributes="Bold" FontSize="16"/>
-                        
-                        <Border BackgroundColor="White" StrokeShape="RoundRectangle 10">
-                            
-                            <CollectionView ItemsSource="{Binding Players}">
+
+<!--добавление игроков типа-->
+                        <CollectionView x:Name="TeamsList">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    
-                                        <Label Text="{Binding .}"
-                                           FontSize="13"
-                                           TextColor="#5E5F71" HeightRequest="30" VerticalOptions="Center"/>
-                                    
+                                    <VerticalStackLayout Spacing="6" Padding="10">
+
+
+                                        <Grid ColumnDefinitions="*,*" RowDefinitions="40, 35 ">
+                                            
+                            <Label Text="Название команды:" Grid.Row="0" FontAttributes="Bold" FontSize="26"/>
+                                            
+                                            <Label Grid.Column="0" Grid.Row="2"
+                                                       Text="{Binding Name}"
+                                                       VerticalOptions="Center"
+                                                       FontSize="22"
+                                                       FontAttributes="Bold"
+                                                       TextColor="#5E5F71"/>
+                                            <Entry Grid.Column="1"
+                                                       Text="{Binding Score}"
+                                                       Keyboard="Numeric"
+                                                       Placeholder="Очки команды"
+                                                       TextChanged="OnScoreChanged" BackgroundColor="White" VerticalOptions="Center"/>
+                                        </Grid>
+
+                        <Label Text="Список участников" FontAttributes="Bold" FontSize="26"/>
+
+                                        <Border BackgroundColor="White" StrokeShape="RoundRectangle 10" Padding="5">
+
+                                            <CollectionView ItemsSource="{Binding Players}">
+                                                <CollectionView.ItemTemplate>
+                                                    <DataTemplate>
+
+                                                        <Label Text="{Binding .}"
+                                                               FontSize="13"
+                                                               TextColor="#5E5F71" HeightRequest="30" VerticalOptions="Center"/>
+
+                                                    </DataTemplate>
+                                                </CollectionView.ItemTemplate>
+                                            </CollectionView>
+                                        </Border>
+                                    </VerticalStackLayout>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
-                        </Border>
-                    </VerticalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+
 
     </Border>
 

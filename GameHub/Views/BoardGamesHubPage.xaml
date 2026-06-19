@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.BoardGamesHubPage"
              Title="Настольные игры"
-             xmlns:modules="clr-namespace:GameHub.Views.Modules"
-             BackgroundColor="#98A9B9">
+             xmlns:modules="clr-namespace:GameHub.Views.Modules">
     <Grid>
         <Grid.ColumnDefinitions>
             
@@ -18,7 +17,7 @@
        
     
     <ScrollView BackgroundColor="White" Grid.Column="1">
-            <Border BackgroundColor="#f6f7e9" StrokeShape="RoundRectangle 10" Stroke="White">
+        <Border BackgroundColor="#f6f7e9" StrokeShape="RoundRectangle 10">
             <VerticalStackLayout>
          
         <modules:PlayerRandomizerView/>

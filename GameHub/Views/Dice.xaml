@@ -2,9 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Dice"
-             Title="Dice"
-             xmlns:modules="clr-namespace:GameHub.Views.Modules">
-    <VerticalStackLayout>
-        <modules:DiceView/>
-    </VerticalStackLayout>
+             Title="Бросить кубик"
+             xmlns:modules="clr-namespace:GameHub.Views.Modules"
+             BackgroundColor="#98A9B9">
+    <Grid >
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="8*"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Padding="40" Grid.Column="1" BackgroundColor="White" Stroke="White" StrokeShape="RoundRectangle 10">
+            <VerticalStackLayout >
+                <modules:DiceView/>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
 </ContentPage>

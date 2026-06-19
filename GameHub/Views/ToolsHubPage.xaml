@@ -5,9 +5,28 @@
              Title="ToolsHubPage"
              xmlns:modules="clr-namespace:GameHub.Views.Modules">
     <VerticalStackLayout>
-        <Label 
-            Text="Tools"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="Набор ултилит" HorizontalOptions="Center"/>
+        <Label Text="Все утилиты в одном месте" HorizontalOptions="Center" />
+        <Grid ColumnSpacing="10" RowSpacing="10" Margin="20" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Таймер" Command="{Binding TimerCommand}" Grid.Row="0" Grid.Column="0"/>
+            <Button Text="Кубик" Command="{Binding DiceCommand}" Grid.Row="0" Grid.Column="1"/>
+
+            <Button Text="Рандомайзер игроков" Command="{Binding GamerRandomCommand}" Grid.Row="1" Grid.Column="0"/>
+            <Button Text="Рандомайзер" Command="{Binding RandomCommand}" Grid.Row="1" Grid.Column="1"/>
+
+            <Button Text="Счетчик очков" Command="{Binding CountCommand}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

@@ -2,8 +2,62 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameHub.Views.Modules.RandomizerView">
-    <VerticalStackLayout>
-        <Label Text="Рандомайзер"/>
-        <Label Text="Выберите "></Label>
+
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+
+        <Label Text="Рандомайзер"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20"/>
+
+        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+            <Entry Grid.Column="0"
+                   Text="{Binding MinValue}"
+                   Keyboard="Numeric"
+                   Placeholder="От"
+                   BackgroundColor="DimGray"
+                   
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Grid.Column="1" 
+                   Text="—" 
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Entry Grid.Column="2"
+                   Text="{Binding MaxValue}"
+                   Keyboard="Numeric"
+                   Placeholder="До"
+                   BackgroundColor="DimGray"
+                   
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"/>
+        </Grid>
+
+        <Label Text="{Binding RangeValidationMessage}"
+               TextColor="Red"
+               FontSize="14"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Сгенерировать"
+                Command="{Binding GenerateRandomCommand}"
+                BackgroundColor="#27AE60"
+                TextColor="White"
+                FontSize="20"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="60"
+                Margin="0,10,0,0"/>
+
+        <Label Text="{Binding Result}"
+               FontSize="72"
+               FontAttributes="Bold"
+               TextColor="#E74C3C"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0"
+               IsVisible="{Binding IsResultVisible}"/>
     </VerticalStackLayout>
 </ContentView>
