@@ -9,42 +9,48 @@
                FontSize="28"
                FontAttributes="Bold"
                HorizontalOptions="Center"
+               Margin="0,0,0,5"/>
+        <Label Text="Выберите промежуток чисел"
+               FontSize="20"
+              
+               HorizontalOptions="Center"
+               TextColor="#676767"
                Margin="0,0,0,20"/>
 
-        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
-            <Entry Grid.Column="0"
+        <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="10">
+            <Entry Grid.Column="1"
                    Text="{Binding MinValue}"
                    Keyboard="Numeric"
                    Placeholder="От"
-                   BackgroundColor="DimGray"
+                   BackgroundColor="#98A9B9"
                    
                    FontSize="18"
                    HorizontalTextAlignment="Center"/>
 
-            <Label Grid.Column="1" 
+            <Label Grid.Column="2" 
                    Text="—" 
                    FontSize="24"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 
-            <Entry Grid.Column="2"
+            <Entry Grid.Column="3"
                    Text="{Binding MaxValue}"
                    Keyboard="Numeric"
                    Placeholder="До"
-                   BackgroundColor="DimGray"
+                   BackgroundColor="#98A9B9"
                    
                    FontSize="18"
                    HorizontalTextAlignment="Center"/>
         </Grid>
 
         <Label Text="{Binding RangeValidationMessage}"
-               TextColor="Red"
+               TextColor="DarkRed"
                FontSize="14"
                HorizontalOptions="Center"/>
 
         <Button Text="Сгенерировать"
                 Command="{Binding GenerateRandomCommand}"
-                BackgroundColor="#27AE60"
+                BackgroundColor="#798776"
                 TextColor="White"
                 FontSize="20"
                 FontAttributes="Bold"
@@ -55,7 +61,7 @@
         <Label Text="{Binding Result}"
                FontSize="72"
                FontAttributes="Bold"
-               TextColor="#E74C3C"
+               TextColor="#405163"
                HorizontalOptions="Center"
                Margin="0,20,0,0"
                IsVisible="{Binding IsResultVisible}"/>
