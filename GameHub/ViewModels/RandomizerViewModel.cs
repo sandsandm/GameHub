@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace GameHub.ViewModels;
 
-public class RandomizerViewModel : INotifyPropertyChanged
+public class RandomizerViewModel : BaseViewModel, INotifyPropertyChanged
 {
     private readonly Random _random = new();
     private int _minValue = 1;
@@ -84,12 +84,5 @@ public class RandomizerViewModel : INotifyPropertyChanged
         }
 
         OnPropertyChanged(nameof(RangeValidationMessage));
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
